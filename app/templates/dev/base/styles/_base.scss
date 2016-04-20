@@ -1,0 +1,52 @@
+/**
+ * Base theme
+ */
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+  background-color: $p1;
+}
+
+// Top header
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: $p3;
+  z-index: 1000;
+  border-bottom: 1px solid $p6;
+
+  #menu {
+    padding-right: 1rem;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  #pageTitle {
+    padding-left: 1rem;
+    font-size: $font-xlarge;
+    font-weight: 600;
+    color: $p5;
+  }
+
+}
+
+#content {
+  margin-top: 80px;
+  z-index: 100;
+}

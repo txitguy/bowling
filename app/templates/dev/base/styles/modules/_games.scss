@@ -1,0 +1,45 @@
+/**
+ * Games
+ */
+
+table#games {
+  width: 95%;
+  margin: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  thead {
+    tr:nth-child(1) {
+      th {
+        text-align: left;
+      }
+    }
+    tr:nth-child(2) {
+      th {
+        text-align: left;
+        font-size: $font-xsmall;
+      }
+    }
+  }
+  tbody {
+    td {
+      font-size: $font-xsmall;
+      border: 1px solid $p6;
+      height: 40px;
+
+      span:nth-child(1) {
+      }
+      span:nth-child(2) {
+      }
+      span:nth-child(3) {
+      }
+    }
+  }
+  tfoot {
+    td:nth-child(2) {
+      text-align: right;
+      padding-right: 0.5em;
+      border:1px solid $p6;
+    }
+  }
+}

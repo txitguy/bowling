@@ -1,0 +1,113 @@
+/**
+ * Typography
+ */
+
+html,
+body,
+h1, h2, h3, h4, h5, h6 {
+  color: $p6;
+}
+
+html,
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: $font-base;
+  line-height: $line-height-base;
+}
+
+// Headers
+h2, h3, h4 {
+  font-weight: 400;
+}
+
+h1, .h1 {
+  font-size: $header-size-1;
+  font-weight: 300;
+}
+h2, .h2 {
+  font-size: $header-size-2;
+}
+h3, .h3 {
+  font-size: $header-size-3;
+}
+h4, .h4 {
+  font-size: $header-size-4;
+}
+h5, .h5 {
+  font-size: $header-size-5;
+  font-weight: 600;
+}
+h6, .h6 {
+  font-size: $header-size-6;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+// Font sizes
+.font-xlarge {
+  font-size: $font-xlarge;
+  font-weight: 300;
+}
+.font-large {
+  font-size: $font-large;
+  font-weight: 300px;
+}
+.font-medium {
+  font-size: $font-medium;
+}
+.font-small {
+  font-size: $font-small;
+}
+.font-xmall {
+  font-size: $font-xsmall;
+}
+.font-mini {
+  font-size: $font-mini;
+  font-weight: 600;
+}
+
+// Font colors
+.font-blue1 {
+  color: $p1;
+}
+.font-blue2 {
+  color: $p2;
+}
+.font-blue3 {
+  color: $p3;
+}
+.font-red {
+  color: $p4;
+}
+.font-light {
+  color: $p5;
+}
+.font-dark {
+  color: $p6;       // Primary text color
+}
+
+// Links
+a, a:link, a:visited {
+  color: $p2;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: $p1;
+}
+
+// Miscellaneous
+.bold {
+  font-weight: 600;
+}
+
+.nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}
