@@ -36,5 +36,6 @@ table.series(ng-repeat="series in plays track by $index")
           div.boxed(ng-if="$index === 9")
             span(ng-if="frame.balls[2].length === 10") X
             span(ng-if="frame.balls[2] && frame.balls[2].length < 10") {{ frame.balls[2].length }}
-        div.score {{ frame.score }}
+        div.score
+          span(ng-if="frame.balls[0]") {{ frame.score }}
       td {{ games.score }}

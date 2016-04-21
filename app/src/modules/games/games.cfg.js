@@ -14,6 +14,15 @@ let config = function config($stateProvider) {
 			},
 			data: {pageTitle: 'Bowling Games'}
 		})
+		.state('creategame', {
+			url: '/games/create',
+			controller: 'CreateController',
+			controllerAs: 'ctrl',
+			templateProvider(Template) {
+				return Template.getTemplate('games/create');
+			},
+			data: {pageTitle: 'Create Game'}
+		})
 	;
 };
 
