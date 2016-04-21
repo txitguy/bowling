@@ -2,19 +2,13 @@
  * Games
  */
 
-table#games {
-  width: 95%;
+table.series {
   margin: auto;
   border-spacing: 0;
   border-collapse: collapse;
 
   thead {
-    tr:nth-child(1) {
-      th {
-        text-align: left;
-      }
-    }
-    tr:nth-child(2) {
+    tr {
       th {
         text-align: left;
         font-size: $font-xsmall;
@@ -25,18 +19,51 @@ table#games {
     td {
       font-size: $font-xsmall;
       border: 1px solid $p6;
-      height: 40px;
+      height: 50px;
+      width: 50px;
+      vertical-align: top;
+      margin: 0;
+      padding: 0;
 
-      span:nth-child(1) {
+      div.pins {
+        line-height: 25px;
+
+        // First throw
+        div:nth-child(1) {
+          text-align: center;
+          margin: auto;
+          height: 25px;
+        }
+
+        // Boxed scores
+        div.boxed {
+          border: 1px solid $p6;
+          border-width: 0 0 1px 1px;
+          width: 25px;
+          height: 25px;
+          text-align: center;
+        }
       }
-      span:nth-child(2) {
+
+      div.score {
+        font-weight: bold;
+        text-align: center;
+        padding-top: 5px;
       }
-      span:nth-child(3) {
-      }
+    }
+
+    td:nth-child(11) {
+      width: 75px;
+    }
+
+    td:last-child {
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
     }
   }
   tfoot {
-    td:nth-child(2) {
+    td:not(:first-child) {
       text-align: right;
       padding-right: 0.5em;
       border:1px solid $p6;

@@ -51,7 +51,7 @@ h6, .h6 {
 }
 .font-large {
   font-size: $font-large;
-  font-weight: 300px;
+  font-weight: 300;
 }
 .font-medium {
   font-size: $font-medium;
@@ -59,7 +59,8 @@ h6, .h6 {
 .font-small {
   font-size: $font-small;
 }
-.font-xmall {
+
+.font-xsmall {
   font-size: $font-xsmall;
 }
 .font-mini {

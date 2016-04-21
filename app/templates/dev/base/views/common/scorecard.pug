@@ -1,0 +1,40 @@
+table.series(ng-repeat="series in plays track by $index")
+  thead
+    tr
+      th Game
+      th 1
+      th 2
+      th 3
+      th 4
+      th 5
+      th 6
+      th 7
+      th 8
+      th 9
+      th 10
+      th Hdcp
+  tfoot
+    tr
+      td(colspan=10) Totals
+      td {{ series.score }}
+      td {{ series.score }}
+  tbody
+    tr(ng-repeat="games in series.games")
+      td
+        span.flex.margin-auto G{{ ($index+1) }}
+      td(ng-repeat="frame in games.frames track by $index")
+        div.pins.flex.flex-space-between.flex-item-center
+          div
+            span(ng-if="frame.balls[0].length < 10") {{ frame.balls[0].length }}
+            span(ng-if="$index === 9 && frame.balls[0].length === 10") X
+          div.boxed
+            span(ng-if="$index !== 9 && frame.balls[0].length === 10") X
+            span(ng-if="$index === 9 && frame.balls[1].length === 10") X
+            span(ng-if="frame.balls[1] && (frame.balls[0].length + frame.balls[1].length) === 10") /
+            span(ng-if="frame.balls[1] && (frame.balls[0].length + frame.balls[1].length) < 10") {{ frame.balls[1].length }}
+            span(ng-if="$index === 9 && frame.balls[0].length === 10") {{ frame.balls[1].length }}
+          div.boxed(ng-if="$index === 9")
+            span(ng-if="frame.balls[2].length === 10") X
+            span(ng-if="frame.balls[2] && frame.balls[2].length < 10") {{ frame.balls[2].length }}
+        div.score {{ frame.score }}
+      td {{ games.score }}
